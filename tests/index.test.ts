@@ -1,5 +1,5 @@
 import "dotenv/config";
-import HasteClient from "../src";
+import PasteClient from "../src";
 
 const KEY = process.env["TEST_API_KEY"];
 
@@ -7,7 +7,7 @@ if (!KEY) {
   throw Error("No API key was provided for the test!");
 }
 
-const client = new HasteClient(KEY);
+const client = new PasteClient(KEY);
 
 async function test() {
   const url = await client.createPaste({

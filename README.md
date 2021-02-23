@@ -9,17 +9,17 @@ A very simple pastebin npm package to create a new paste!
 **commonjs**
 
 ```js
-const HasteClient = require("hastepin-api");
+const PasteClient = require("pastebin-api");
 
-const client = new HasteClient("DEV_API_KEY");
+const client = new PasteClient("DEV_API_KEY");
 ```
 
 **ES6**
 
 ```ts
-import HasteClient from "hastepin-api";
+import PasteClient from "pastebin-api";
 
-const client = new HasteClient("DEV_API_KEY");
+const client = new PasteClient("DEV_API_KEY");
 ```
 
 ### Create a paste
@@ -27,9 +27,9 @@ const client = new HasteClient("DEV_API_KEY");
 **commonjs**
 
 ```js
-const HasteClient = require("hastepin-api");
+const PasteClient = require("pastebin-api");
 
-const client = new HasteClient("DEV_API_KEY");
+const client = new PasteClient("DEV_API_KEY");
 
 const url = await client.createPaste({
   code: "const something = 'Hello World!'",
@@ -45,9 +45,9 @@ console.log(url);
 **ES6**
 
 ```ts
-import HasteClient from "hastepin-api";
+import PasteClient from "pastebin-api";
 
-const client = new HasteClient("DEV_API_KEY");
+const client = new PasteClient("DEV_API_KEY");
 
 const url = await client.createPaste({
   code: "const something = 'Hello World!'",

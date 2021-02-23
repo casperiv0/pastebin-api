@@ -2,7 +2,7 @@
 import fetch, { BodyInit } from "node-fetch";
 import { Options } from "./interfaces";
 
-class HasteClient {
+class PasteClient {
   private apiKey: string;
   private createNewPasteUrl = "https://pastebin.com/api/api_post.php";
 
@@ -59,4 +59,4 @@ class HasteClient {
   }
 }
 
-export default HasteClient;
+export default PasteClient;
