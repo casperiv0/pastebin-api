@@ -18,6 +18,14 @@
   "dependencies": {
     "node-fetch": "^2.6.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dev-CasperTheGhost/pastebin-api"
+  },
+  "bugs": {
+    "url": "https://github.com/Dev-CasperTheGhost/pastebin-api/issues"
+  },
+  "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/node": "^14.14.31",

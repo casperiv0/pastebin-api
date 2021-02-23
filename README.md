@@ -1,6 +1,6 @@
 # pastebin-api
 
-WIP
+A very simple pastebin npm package to create a new paste!
 
 ## Docs
 
