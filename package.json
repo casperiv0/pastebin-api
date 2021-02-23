@@ -16,9 +16,7 @@
   "author": "Dev-CasperTheGhost",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^12.5.1",
-    "node-fetch": "^2.6.1",
-    "pastebin-api": "^0.0.1"
+    "node-fetch": "^2.6.1"
   },
   "repository": {
     "type": "git",
