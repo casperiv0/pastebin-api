@@ -2,15 +2,16 @@
   "name": "discord-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
   },
   "keywords": [],
   "author": "Dev-CasperTheGhost",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "pastebin-api": "^0.0.1"
+    "pastebin-api": "^0.0.5"
   }
 }

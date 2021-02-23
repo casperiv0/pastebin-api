@@ -1,21 +1,32 @@
 const { Client } = require("discord.js");
-const PasteClient = require("pastebin-api");
+const PasteClient = require("../../dist").default;
 
 const bot = new Client();
 const pasteClient = new PasteClient("DEV_API_KEY");
 
 bot.on("message", async (message) => {
-  if (message.content.startsWith("!create-paste")) {
-    const url = await pasteClient.createPaste({
-      code: message.content,
-      expireDate: "N",
-      format: "javascript",
-      name: "something.js",
-      publicity: "0",
-    });
+  if (message.author.bot) return;
+  const prefix = "!";
+  const [arg, ...args] = message.content.slice(prefix?.length).trim().split(/ +/g);
 
-    return message.channel.send(url);
+  switch (arg.toLowerCase()) {
+    case "create-paste": {
+      const url = await pasteClient.createPaste({
+        code: args,
+        expireDate: "N",
+        format: "javascript",
+        name: "something.js",
+        publicity: "0",
+      });
+
+      return message.channel.send(url);
+    }
+    default: {
+      return message.channel.send("That command was not found");
+    }
   }
 });
 
-bot.login("BOT_TOKEN");
+bot.on("ready", () => console.log("Bot is ready!"));
+
+bot.login("NzMwMzk0NTQwNjE5MzMzNzEy.XwW27A.BfUzuwUhjvREvOegI49mGy73lC8");

@@ -9,7 +9,7 @@ A very simple pastebin npm package to create a new paste!
 **commonjs**
 
 ```js
-const PasteClient = require("pastebin-api");
+const PasteClient = require("pastebin-api").default;
 
 const client = new PasteClient("DEV_API_KEY");
 ```
@@ -27,7 +27,7 @@ const client = new PasteClient("DEV_API_KEY");
 **commonjs**
 
 ```js
-const PasteClient = require("pastebin-api");
+const PasteClient = require("pastebin-api").default;
 
 const client = new PasteClient("DEV_API_KEY");
 
