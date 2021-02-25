@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.8
+
+- Added documentation
+
 ## 0.0.7
 
 - Added `login`, `getPastesByUser` and `deletePasteByKey` methods (docs to follow)
