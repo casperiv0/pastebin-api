@@ -20,4 +20,4 @@ Made with ❤️ and TypeScript!
 
 ## License
 
-[Apache © Dev-CasperTheGhost](./LICENSE)
+[MIT © Dev-CasperTheGhost](./LICENSE)
