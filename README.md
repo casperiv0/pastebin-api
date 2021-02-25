@@ -1,71 +1,23 @@
 # pastebin-api
 
-A very simple pastebin npm package to create a new paste!
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/pastebin-api)
+![License](https://img.shields.io/github/license/dev-caspertheghost/pastebin-api)
+![Downloads](https://img.shields.io/npm/dw/pastebin-api)
+
+A very simple pastebin npm package to interact with the pastebin api!
 
 ## Docs
 
-### Client
+[You can checkout the docs here](docs/README.md)
 
-**commonjs**
+## Support
 
-```js
-const PasteClient = require("pastebin-api").default;
+All stars/forks are appreciated! ⚡
 
-const client = new PasteClient("DEV_API_KEY");
-```
+Feel free to open a pull request with a new feature.
 
-**ES6**
+Made with ❤️ and TypeScript!
 
-```ts
-import PasteClient from "pastebin-api";
+## License
 
-const client = new PasteClient("DEV_API_KEY");
-```
-
-### Create a paste
-
-**commonjs**
-
-```js
-const PasteClient = require("pastebin-api").default;
-
-const client = new PasteClient("DEV_API_KEY");
-
-const url = await client.createPaste({
-  code: "const something = 'Hello World!'",
-  expireDate: "N",
-  format: "javascript",
-  name: "something.js",
-  publicity: 0,
-});
-
-console.log(url);
-```
-
-**ES6**
-
-```ts
-import PasteClient from "pastebin-api";
-
-const client = new PasteClient("DEV_API_KEY");
-
-const url = await client.createPaste({
-  code: "const something = 'Hello World!'",
-  expireDate: "N",
-  format: "javascript",
-  name: "something.js",
-  publicity: 0,
-});
-
-console.log(url);
-```
-
-**Options**
-
-| Name         | Type     | Description                       |
-| ------------ | -------- | --------------------------------- |
-| `code`       | `string` | The code you want to push         |
-| `expireDate` | `string` | Sets the expire date of the paste |
-| `format`     | `string` | The Syntax format                 |
-| `name`       | `string` | The name of your paste            |
-| `publicity`  | `string` | `0` \| `1` \| `2`                 |
+[Apache © Dev-CasperTheGhost](./LICENSE)
