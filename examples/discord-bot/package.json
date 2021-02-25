@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "pastebin-api": "^0.0.5"
+    "pastebin-api": "^0.0.7"
   }
 }

@@ -95,7 +95,7 @@ class PasteClient {
    * @returns {boolean} Whether it was deleted or not
    * @see [https://pastebin.com/doc_api#11](https://pastebin.com/doc_api#11)
    */
-  async deletePasteById(options: DeletePasteOptions): Promise<boolean> {
+  async deletePasteByKey(options: DeletePasteOptions): Promise<boolean> {
     const res = await fetch(this.pasteBinUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
