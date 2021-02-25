@@ -19,6 +19,7 @@
   "author": "Dev-CasperTheGhost",
   "license": "MIT",
   "dependencies": {
+    "fast-xml-parser": "^3.18.0",
     "node-fetch": "^2.6.1"
   },
   "repository": {

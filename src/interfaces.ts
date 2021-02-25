@@ -271,7 +271,7 @@ export type ApiPasteFormat =
  * 1 = unlisted
  * 2 = private
  */
-export type Publicity = "1" | "0" | "2";
+export type Publicity = 0 | 1 | 2;
 
 /**
  * N = never
@@ -286,11 +286,34 @@ export type Publicity = "1" | "0" | "2";
  */
 export type ExpireDate = "N" | "10M" | "1H" | "1D" | "1W" | "2W" | "1M" | "6M" | "1Y";
 
-export interface Options {
+export interface CreateOptions {
   publicity?: Publicity;
   expireDate?: ExpireDate;
   format?: ApiPasteFormat;
   name?: string;
-  api_user_key?: string;
+  apiUserKey?: string;
   code: string;
+}
+
+export interface GetPastesOptions {
+  userKey: string;
+  limit?: number;
+}
+
+export interface DeletePasteOptions {
+  userKey: string;
+  pasteKey: string;
+}
+
+export interface ParsedPaste {
+  paste_key: string;
+  paste_date: number;
+  paste_title: string;
+  paste_size: number;
+  paste_expire_date: number;
+  paste_private: Publicity;
+  paste_format_long: string;
+  paste_format_short: string;
+  paste_url: string;
+  paste_hits: string;
 }

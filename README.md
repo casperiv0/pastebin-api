@@ -36,7 +36,7 @@ const url = await client.createPaste({
   expireDate: "N",
   format: "javascript",
   name: "something.js",
-  publicity: "0",
+  publicity: 0,
 });
 
 console.log(url);
@@ -54,7 +54,7 @@ const url = await client.createPaste({
   expireDate: "N",
   format: "javascript",
   name: "something.js",
-  publicity: "0",
+  publicity: 0,
 });
 
 console.log(url);
