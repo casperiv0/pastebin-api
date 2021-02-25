@@ -29,4 +29,4 @@ bot.on("message", async (message) => {
 
 bot.on("ready", () => console.log("Bot is ready!"));
 
-bot.login("NzMwMzk0NTQwNjE5MzMzNzEy.XwW27A.BfUzuwUhjvREvOegI49mGy73lC8");
+bot.login("BOT_TOKEN");
