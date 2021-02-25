@@ -1,7 +1,7 @@
 {
   "name": "pastebin-api",
   "version": "0.0.7",
-  "description": "A very simple pastebin npm package to create a new paste! ",
+  "description": "A very simple pastebin npm package to interact with the pastebin api!",
   "main": "dist/index.js",
   "files": [
     "dist"
