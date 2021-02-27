@@ -58,6 +58,10 @@ class PasteClient {
       }
     }
 
+    if (!options.userKey) {
+      throw Error("'userKey' must be provided (PasteClient#getPastesByUser)");
+    }
+
     const res = await fetch(this.pasteBinUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -96,6 +100,14 @@ class PasteClient {
    * @see [https://pastebin.com/doc_api#11](https://pastebin.com/doc_api#11)
    */
   async deletePasteByKey(options: DeletePasteOptions): Promise<boolean> {
+    if (!options.userKey) {
+      throw Error("'userKey' must be provided (PasteClient#deletePasteByKey)");
+    }
+
+    if (!options.pasteKey) {
+      throw Error("'pasteKey' must be provided (PasteClient#deletePasteByKey)");
+    }
+
     const res = await fetch(this.pasteBinUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },

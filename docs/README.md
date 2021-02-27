@@ -6,6 +6,8 @@
 - [Login using name and password](#login-using-name-and-password)
 - [Get all pastes from user](#get-pastes-from-user)
 - [Delete a paste](#delete-a-paste)
+- [Publicity Types](#publicity-types)
+- [Expire Date Types](#expire-date-types)
 
 ## Initialize The Client
 
@@ -160,5 +162,31 @@ console.log(pastes);
 | ---------- | -------- | --------------------------------------------------------------------------- | -------- |
 | `userKey`  | `string` | The token returned from [PasteClient#login](#login-using-name-and-password) | `true`   |
 | `pasteKey` | `string` | The key (id) of the paste                                                   | `true`   |
+
+[**Back To Top**](#documentation)
+
+## Publicity Types
+
+| Value | Type     | Description                                                    |
+| ----- | -------- | -------------------------------------------------------------- |
+| `0`   | `number` | This paste will be **public** and **listed**                   |
+| `1`   | `number` | This paste will be **unlisted**                                |
+| `2`   | `number` | The paste will be **private** (Only available when logged in) |
+
+[**Back To Top**](#documentation)
+
+## Expire Date Types
+
+| Value | Type     | Description |
+| ----- | -------- | ----------- |
+| `N`   | `string` | Never       |
+| `10M` | `string` | 10 Minutes  |
+| `1H`  | `string` | 1 Hour      |
+| `1D`  | `string` | 1 Day       |
+| `1W`  | `string` | 1 Week      |
+| `2W`  | `string` | 2 Weeks     |
+| `1M`  | `string` | 1 Month     |
+| `6M`  | `string` | 6 Months    |
+| `1Y`  | `string` | 1 Year      |
 
 [**Back To Top**](#documentation)

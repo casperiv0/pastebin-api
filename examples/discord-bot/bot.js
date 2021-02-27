@@ -16,7 +16,7 @@ bot.on("message", async (message) => {
         expireDate: "N",
         format: "javascript",
         name: "something.js",
-        publicity: "0",
+        publicity: 0,
       });
 
       return message.channel.send(url);

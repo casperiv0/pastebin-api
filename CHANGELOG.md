@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.9
+
+- Added errors when not providing required data
+- Updated documentation
+
 ## 0.0.8
 
 - Added documentation
