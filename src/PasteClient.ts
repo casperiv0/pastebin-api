@@ -22,6 +22,10 @@ class PasteClient {
    * @see [https://pastebin.com/doc_api#2](https://pastebin.com/doc_api#2)
    */
   async createPaste(options: CreateOptions): Promise<string> {
+    if (options.name && options.name.length > 100) {
+      throw Error("Name of paste cannot be longer than 100 characters");
+    }
+
     const res = await fetch(this.pasteBinUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -30,7 +34,7 @@ class PasteClient {
         api_option: "paste",
         api_paste_code: options.code,
         api_paste_format: options.format ?? "javascript",
-        api_paste_private: options.publicity ?? "0",
+        api_paste_private: options.publicity ?? 0,
         api_paste_expire_date: options.expireDate ?? "N",
         api_user_key: options.apiUserKey ?? "",
       }),

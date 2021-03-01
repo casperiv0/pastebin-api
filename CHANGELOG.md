@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+- Creating a paste will now throw an error if name is longer than 100 characters
+
 ## 0.0.9
 
 - Added errors when not providing required data

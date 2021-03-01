@@ -75,13 +75,13 @@ console.log(url);
 
 **Options**
 
-| Name         | Type     | Description                       | Required |
-| ------------ | -------- | --------------------------------- | -------- |
-| `code`       | `string` | The code you want to push         | `true`   |
-| `expireDate` | `string` | Sets the expire date of the paste | `false`  |
-| `format`     | `string` | The Syntax format                 | `false`  |
-| `name`       | `string` | The name of your paste            | `false`  |
-| `publicity`  | `number` | `0` \| `1` \| `2`                 | `false`  |
+| Name         | Type     | Description                                      | Required |
+| ------------ | -------- | ------------------------------------------------ | -------- |
+| `code`       | `string` | The code you want to push                        | `true`   |
+| `expireDate` | `string` | Sets the expire date of the paste                | `false`  |
+| `format`     | `string` | The Syntax format                                | `false`  |
+| `name`       | `string` | The name of your paste (Limit of 100 characters) | `false`  |
+| `publicity`  | `number` | `0` \| `1` \| `2`                                | `false`  |
 
 [**Back To Top**](#documentation)
 
@@ -167,10 +167,10 @@ console.log(pastes);
 
 ## Publicity Types
 
-| Value | Type     | Description                                                    |
-| ----- | -------- | -------------------------------------------------------------- |
-| `0`   | `number` | This paste will be **public** and **listed**                   |
-| `1`   | `number` | This paste will be **unlisted**                                |
+| Value | Type     | Description                                                   |
+| ----- | -------- | ------------------------------------------------------------- |
+| `0`   | `number` | This paste will be **public** and **listed**                  |
+| `1`   | `number` | This paste will be **unlisted**                               |
 | `2`   | `number` | The paste will be **private** (Only available when logged in) |
 
 [**Back To Top**](#documentation)
