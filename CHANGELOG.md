@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Fixed issue with paste name (#7). Thanks @2colours
+
 ## 1.0.0
 
 - Creating a paste will now throw an error if name is longer than 100 characters
