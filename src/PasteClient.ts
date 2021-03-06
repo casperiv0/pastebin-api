@@ -32,6 +32,7 @@ class PasteClient {
       body: this.encode({
         api_dev_key: this.apiKey,
         api_option: "paste",
+        api_paste_name: options.name ?? "Untitled",
         api_paste_code: options.code,
         api_paste_format: options.format ?? "javascript",
         api_paste_private: options.publicity ?? 0,
