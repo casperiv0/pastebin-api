@@ -82,6 +82,8 @@ console.log(url);
 | `format`     | `string` | The Syntax format                                | `false`  |
 | `name`       | `string` | The name of your paste (Limit of 100 characters) | `false`  |
 | `publicity`  | `number` | `0` \| `1` \| `2`                                | `false`  |
+| `folderKey`  | `string` | The folder key(id)                               | `false`  |
+| `apiUserKey` | `string` | The user key gotten from PasteClient#login       | `false`  |
 
 [**Back To Top**](#documentation)
 

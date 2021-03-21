@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Support for `folderKey`
+- Updated docs
+
 ## 1.0.1
 
 - Fixed issue with paste name (#7). Thanks @2colours

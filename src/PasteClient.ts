@@ -38,6 +38,7 @@ class PasteClient {
         api_paste_private: options.publicity ?? 0,
         api_paste_expire_date: options.expireDate ?? "N",
         api_user_key: options.apiUserKey ?? "",
+        api_folder_key: options.folderKey ?? "",
       }),
     });
 

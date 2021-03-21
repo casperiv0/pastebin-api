@@ -292,6 +292,7 @@ export interface CreateOptions {
   format?: ApiPasteFormat;
   name?: string;
   apiUserKey?: string;
+  folderKey?: string;
   code: string;
 }
 
