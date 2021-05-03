@@ -1,3 +1,4 @@
+/* eslint-disable */
 const { Client } = require("discord.js");
 const PasteClient = require("../../dist").default;
 
@@ -9,10 +10,14 @@ bot.on("message", async (message) => {
   const prefix = "!";
   const [arg, ...args] = message.content.slice(prefix?.length).trim().split(/ +/g);
 
+  if (args.length <= 0) {
+    return message.channel.send("Woah! You need to specify some JavaScript code!");
+  }
+
   switch (arg.toLowerCase()) {
     case "create-paste": {
       const url = await pasteClient.createPaste({
-        code: args,
+        code: args.join(" "),
         expireDate: "N",
         format: "javascript",
         name: "something.js",

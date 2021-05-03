@@ -1,61 +1,67 @@
 # Changelog
 
+## 1.0.5
+
+- chore: Updated dependencies
+- chore: Added ESLint workflow file
+- chore: updated examples
+
 ## 1.0.4
 
-- Updated dependencies
+- chore: Updated dependencies
 
 ## 1.0.3
 
-- Updated dependencies
+- chore: Updated dependencies
 
 ## 1.0.2
 
-- Support for `folderKey`
-- Updated docs
+- feat: Support for `folderKey`
+- chore: Updated docs
 
 ## 1.0.1
 
-- Fixed issue with paste name (#7). Thanks @2colours
+- fix: Fixed issue with paste name (#7). Thanks @2colours
 
 ## 1.0.0
 
-- Creating a paste will now throw an error if name is longer than 100 characters
+- fix: Creating a paste will now throw an error if name is longer than 100 characters
 
 ## 0.0.9
 
-- Added errors when not providing required data
-- Updated documentation
+- fix: Added errors when not providing required data
+- chore: Updated documentation
 
 ## 0.0.8
 
-- Added documentation
+- feat: Added documentation
 
 ## 0.0.7
 
-- Added `login`, `getPastesByUser` and `deletePasteByKey` methods (docs to follow)
-- Updated TypeScript to `4.2.2`
-- Added Changelog 🎉
+- feat: Added `login`, `getPastesByUser` and `deletePasteByKey` methods (docs to follow)
+- chore: Updated TypeScript to `4.2.2`
+- chore: Added Changelog 🎉
 
 ## 0.0.6
 
-- Fixed examples
+- fix: Fixed examples
 
 ## 0.0.5
 
-- Fixed modules
+- fix: Fixed modules
 
 ## 0.0.4
 
-- Added typings 🎉
+- feat: Added typings 🎉
 
 ## 0.0.3
 
-- Fixed minor things in package.json
+- fix: Fixed minor things in package.json
 
 ## 0.0.2
 
-- Added examples
-- Renamed `HasteClient` to `PasteClient`
+- chore: Added examples
+- chore: Renamed `HasteClient` to `PasteClient`
 
 ## 0.0.1
 

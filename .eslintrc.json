@@ -28,6 +28,6 @@
     "default-case": ["warn"],
     "default-case-last": ["error"],
     "no-useless-catch": ["warn"],
-    "prettier/prettier": ["warn"]
+    "prettier/prettier": ["error"]
   }
 }
