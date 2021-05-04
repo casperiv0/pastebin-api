@@ -154,8 +154,8 @@ const deleted = await client.deletePasteByKey({
   pasteKey: "paste-key-here",
 });
 
-// An array of pastes
-console.log(pastes);
+//=> `true` or `false`
+console.log(deleted);
 ```
 
 **Options**

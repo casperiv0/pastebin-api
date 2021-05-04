@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- fix: incorrect docs for `PasteClient#deletePasteByKey`
+
 ## 1.0.5
 
 - chore: Updated dependencies
