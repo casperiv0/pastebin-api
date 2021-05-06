@@ -1,4 +1,4 @@
-import PasteClient from "./PasteClient";
+import PasteClient from "./PasteClient.js";
 
 export default PasteClient;
 export {

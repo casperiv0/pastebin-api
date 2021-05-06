@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "An example of using discord.js with pastebin-api",
   "main": "bot.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
   "keywords": [],
-  "author": "Dev-CasperTheGhost",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
     "pastebin-api": "^1.0.5"

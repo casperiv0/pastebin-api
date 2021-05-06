@@ -11,23 +11,13 @@
 
 ## Initialize The Client
 
-**commonjs**
-
-```js
-const PasteClient = require("pastebin-api").default;
-
-const client = new PasteClient("DEV_API_KEY");
-```
-
-**ES6**
-
 ```ts
 import PasteClient from "pastebin-api";
 
 const client = new PasteClient("DEV_API_KEY");
 ```
 
-**Options**
+### Options
 
 | Name        | Type     | Description                                        | Required |
 | ----------- | -------- | -------------------------------------------------- | -------- |
@@ -37,26 +27,6 @@ const client = new PasteClient("DEV_API_KEY");
 
 ## Create a Paste
 
-**commonjs**
-
-```js
-const PasteClient = require("pastebin-api").default;
-
-const client = new PasteClient("DEV_API_KEY");
-
-const url = await client.createPaste({
-  code: "const something = 'Hello World!'",
-  expireDate: "N",
-  format: "javascript",
-  name: "something.js",
-  publicity: 0,
-});
-
-console.log(url);
-```
-
-**ES6**
-
 ```ts
 import PasteClient from "pastebin-api";
 
@@ -73,7 +43,7 @@ const url = await client.createPaste({
 console.log(url);
 ```
 
-**Options**
+### Options
 
 | Name         | Type     | Description                                      | Required |
 | ------------ | -------- | ------------------------------------------------ | -------- |
@@ -89,8 +59,6 @@ console.log(url);
 
 ## Login using name and password
 
-**commonjs & ES6**
-
 ```js
 const client = new PasteClient("DEV_API_KEY");
 
@@ -100,7 +68,7 @@ const token = await client.login("user_name", "user_password");
 console.log(token);
 ```
 
-**Options**
+### Options
 
 | Name       | Type     | Description         | Required |
 | ---------- | -------- | ------------------- | -------- |
@@ -110,8 +78,6 @@ console.log(token);
 [**Back To Top**](#documentation)
 
 ## Get pastes from user
-
-**commonjs & ES6**
 
 ```js
 const client = new PasteClient("DEV_API_KEY");
@@ -129,7 +95,7 @@ const pastes = await client.getPastesByUser({
 console.log(pastes);
 ```
 
-**Options**
+### Options
 
 | Name      | Type     | Description                                                                 | Required |
 | --------- | -------- | --------------------------------------------------------------------------- | -------- |
@@ -139,8 +105,6 @@ console.log(pastes);
 [**Back To Top**](#documentation)
 
 ## Delete a paste
-
-**commonjs & ES6**
 
 ```js
 const client = new PasteClient("DEV_API_KEY");
@@ -158,7 +122,7 @@ const deleted = await client.deletePasteByKey({
 console.log(deleted);
 ```
 
-**Options**
+### Options
 
 | Name       | Type     | Description                                                                 | Required |
 | ---------- | -------- | --------------------------------------------------------------------------- | -------- |

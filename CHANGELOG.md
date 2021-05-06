@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.0.0
+
+**BREAKING CHANGES:**
+
+- chore: move to ESM ([Read this.](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#pure-esm-package))
+
+```diff
+- const PasteClient = require("pastebin-api").default;
+
++ import PasteClient from "pastebin-api";
+```
+
 ## 1.0.6
 
 - fix: incorrect docs for `PasteClient#deletePasteByKey`

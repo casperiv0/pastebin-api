@@ -2,14 +2,14 @@ import fetch, { BodyInit } from "node-fetch";
 import Parser from "fast-xml-parser";
 import { CreateOptions, GetPastesOptions, ParsedPaste, DeletePasteOptions } from "./interfaces";
 
-class PasteClient {
+export default class PasteClient {
   private apiKey: string;
   private pasteBinUrl = "https://pastebin.com/api/api_post.php";
   private loginUrl = "https://pastebin.com/api/api_login.php";
 
   constructor(apiKey: string) {
     if (typeof apiKey !== "string" || !apiKey) {
-      throw Error("`apiKey` must be a string!");
+      throw new Error("`apiKey` must be a string!");
     }
 
     this.apiKey = apiKey;
@@ -23,7 +23,7 @@ class PasteClient {
    */
   async createPaste(options: CreateOptions): Promise<string> {
     if (options.name && options.name.length > 100) {
-      throw Error("Name of paste cannot be longer than 100 characters");
+      throw new Error("Name of paste cannot be longer than 100 characters");
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -45,7 +45,7 @@ class PasteClient {
     const url = await res.text();
 
     if (url.toLowerCase().startsWith("bad api request")) {
-      throw Error(url);
+      throw new Error(url);
     }
 
     return url;
@@ -81,7 +81,7 @@ class PasteClient {
 
     const data = await res.text();
     if (data.toLowerCase().startsWith("bad api request")) {
-      throw Error(data);
+      throw new Error(data);
     }
 
     // If no pastes are found simply return an empty array
@@ -107,11 +107,11 @@ class PasteClient {
    */
   async deletePasteByKey(options: DeletePasteOptions): Promise<boolean> {
     if (!options.userKey) {
-      throw Error("'userKey' must be provided (PasteClient#deletePasteByKey)");
+      throw new Error("'userKey' must be provided (PasteClient#deletePasteByKey)");
     }
 
     if (!options.pasteKey) {
-      throw Error("'pasteKey' must be provided (PasteClient#deletePasteByKey)");
+      throw new Error("'pasteKey' must be provided (PasteClient#deletePasteByKey)");
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -127,7 +127,7 @@ class PasteClient {
 
     const data = await res.text();
     if (data.toLowerCase().startsWith("bad api request")) {
-      throw Error(data);
+      throw new Error(data);
     }
 
     // Paste was successfully removed
@@ -154,7 +154,7 @@ class PasteClient {
 
     const data = await res.text();
     if (data.toLowerCase().startsWith("bad api request")) {
-      throw Error(data);
+      throw new Error(data);
     }
 
     return data;
@@ -175,5 +175,3 @@ class PasteClient {
     return string.substring(1);
   }
 }
-
-export default PasteClient;

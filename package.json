@@ -1,8 +1,18 @@
 {
   "name": "pastebin-api",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "A very simple pastebin npm package to interact with the pastebin api!",
-  "main": "dist/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Dev-CasperTheGhost",
+    "url": "https://caspertheghost.me"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "engines": {
+    "node": ">=12.17"
+  },
   "files": [
     "dist"
   ],
@@ -18,8 +28,6 @@
     "paste",
     "pastebin-api"
   ],
-  "author": "Dev-CasperTheGhost",
-  "license": "MIT",
   "dependencies": {
     "fast-xml-parser": "^3.19.0",
     "node-fetch": "^2.6.1"
@@ -45,5 +53,12 @@
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": false,
+    "printWidth": 100,
+    "tabWidth": 2
   }
 }

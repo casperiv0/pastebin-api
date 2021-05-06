@@ -6,6 +6,32 @@
 
 A very simple pastebin npm package to interact with the pastebin api!
 
+## Installation
+
+### npm
+
+```bash
+npm i pastebin-api
+```
+
+### yarn
+
+```bash
+yarn add pastebin-api
+```
+
+## Usage
+
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#pure-esm-package), Node 12+ is required and must be imported.
+
+```js
+import PasteClient from "pastebin-api";
+
+const client = new PasteClient("DEV_KEY_HERE");
+
+/* ... */
+```
+
 ## Docs
 
 [You can checkout the docs here](docs/README.md)
