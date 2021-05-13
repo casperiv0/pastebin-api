@@ -92,7 +92,7 @@ export default class PasteClient {
     const parsed = Parser.parse(data);
 
     // It can either return an array or an object
-    if (typeof parsed["paste"]?.sort !== "undefined") {
+    if (Array.isArray(parsed["paste"])) {
       return parsed["paste"];
     } else {
       return [parsed["paste"]];

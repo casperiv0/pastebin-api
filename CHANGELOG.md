@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.1
+
+- new: able to import `PasteClient` via named exports (`import { PasteClient } from "pastebin-api"`)
+  - Old method still works too.
+- chore: replace type `string` with `ApiPasteFormat` for `paste_format_short`
+- chore: use `Array.isArray` instead of `typeof`
+- chore: update dependencies
+
 ## 2.0.0
 
 **BREAKING CHANGES:**

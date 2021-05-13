@@ -10,6 +10,6 @@
   "keywords": [],
   "dependencies": {
     "discord.js": "^12.5.3",
-    "pastebin-api": "^1.0.5"
+    "pastebin-api": "latest"
   }
 }

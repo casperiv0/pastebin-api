@@ -26,6 +26,8 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 
 ```js
 import PasteClient from "pastebin-api";
+// Or
+import { PasteClient } from "pastebin-api";
 
 const client = new PasteClient("DEV_KEY_HERE");
 

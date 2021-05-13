@@ -314,7 +314,7 @@ export interface ParsedPaste {
   paste_expire_date: number;
   paste_private: Publicity;
   paste_format_long: string;
-  paste_format_short: string;
+  paste_format_short: ApiPasteFormat;
   paste_url: string;
   paste_hits: string;
 }

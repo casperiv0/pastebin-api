@@ -1,6 +1,8 @@
 import PasteClient from "./PasteClient.js";
 
+export { PasteClient };
 export default PasteClient;
+
 export {
   ApiPasteFormat,
   ExpireDate,
