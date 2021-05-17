@@ -16,7 +16,7 @@ export default class PasteClient {
   }
 
   /**
-   * Creates the paste
+   * creates the paste
    * @param {Options} options The options for the paste
    * @returns {Promise<string>} The URL of the created paste
    * @see [https://pastebin.com/doc_api#2](https://pastebin.com/doc_api#2)
@@ -52,7 +52,7 @@ export default class PasteClient {
   }
 
   /**
-   * Get a limit of 1000 pastes from the logged in user
+   * get a limit of 1000 pastes from the logged in user
    * @param {GetPastesOptions} options
    * @returns An array of all the user's pastes
    * @see [https://pastebin.com/doc_api#10](https://pastebin.com/doc_api#10)
@@ -84,14 +84,14 @@ export default class PasteClient {
       throw new Error(data);
     }
 
-    // If no pastes are found simply return an empty array
+    // if no pastes are found simply return an empty array
     if (data.toLowerCase().startsWith("no pastes found")) {
       return [];
     }
 
     const parsed = Parser.parse(data);
 
-    // It can either return an array or an object
+    // it can either return an array or an object
     if (Array.isArray(parsed["paste"])) {
       return parsed["paste"];
     } else {
@@ -100,7 +100,7 @@ export default class PasteClient {
   }
 
   /**
-   * Delete a paste by it's key
+   * delete a paste by it's key
    * @param {DeletePasteOptions} options
    * @returns {boolean} Whether it was deleted or not
    * @see [https://pastebin.com/doc_api#11](https://pastebin.com/doc_api#11)
@@ -130,12 +130,12 @@ export default class PasteClient {
       throw new Error(data);
     }
 
-    // Paste was successfully removed
+    // paste was successfully removed
     return data.toLowerCase().startsWith("paste removed");
   }
 
   /**
-   * Login to get access to more API routes
+   * login to get access to more API routes
    * @param {string} name The user's name
    * @param {string} password The user's password
    * @returns The user token to use for other API routes
@@ -161,7 +161,7 @@ export default class PasteClient {
   }
 
   /**
-   * Encodes data to valid URI
+   * encodes data to valid URI
    * @param data The data you want to encode
    */
   private encode(data: { [key: string]: unknown }): BodyInit {

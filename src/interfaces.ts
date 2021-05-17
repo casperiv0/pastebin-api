@@ -273,6 +273,7 @@ export type ApiPasteFormat =
  */
 export type Publicity = 0 | 1 | 2;
 
+// eslint-disable-next-line capitalized-comments
 /**
  * N = never
  * 10M = 10 Minutes

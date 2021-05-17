@@ -8,7 +8,8 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "@casper124578/eslint-config"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,17 +18,6 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "quotes": ["error", "double"],
-    "semi": ["error", "always"],
-    "no-multi-spaces": ["error"],
-    "eqeqeq": ["warn", "always"],
-    "no-unused-vars": ["error"],
-    "no-duplicate-case": ["error"],
-    "no-extra-semi": ["error"],
-    "no-unreachable": ["error"],
-    "default-case": ["warn"],
-    "default-case-last": ["error"],
-    "no-useless-catch": ["warn"],
     "prettier/prettier": ["error"]
   }
 }
