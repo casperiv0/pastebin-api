@@ -1,6 +1,6 @@
 {
   "name": "pastebin-api",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A very simple pastebin npm package to interact with the pastebin api!",
   "license": "MIT",
   "author": {
@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "rm -rf dist/ && tsc",
-    "lint:check": "eslint . --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,yml}\" --ignore-path .gitignore"
   },
   "keywords": [
@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
+    "@casper124578/eslint-config": "^0.0.3",
     "@types/dotenv": "^8.2.0",
     "@types/node": "^15.0.3",
     "@types/node-fetch": "^2.5.10",
