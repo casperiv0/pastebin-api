@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2 & 2.0.3
+
+- chore: Add custom ESLint config
+
 ## 2.0.1
 
 - new: able to import `PasteClient` via named exports (`import { PasteClient } from "pastebin-api"`)

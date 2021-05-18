@@ -94,9 +94,9 @@ export default class PasteClient {
     // it can either return an array or an object
     if (Array.isArray(parsed["paste"])) {
       return parsed["paste"];
-    } else {
-      return [parsed["paste"]];
     }
+
+    return [parsed["paste"]];
   }
 
   /**
