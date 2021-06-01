@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
-    "@casper124578/eslint-config": "^0.0.4",
+    "@casper124578/eslint-config": "^0.0.12",
     "@types/dotenv": "^8.2.0",
     "@types/node": "^15.0.3",
     "@types/node-fetch": "^2.5.10",
