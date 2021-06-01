@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
+- chore: bump dependencies
+
 ## 2.0.2 & 2.0.3
 
 - chore: Add custom ESLint config
