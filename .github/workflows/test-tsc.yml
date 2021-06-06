@@ -3,7 +3,7 @@ name: Test TypeScript build
 on: [push, pull_request]
 
 jobs:
-  ESLint:
+  test-tsc:
     runs-on: ubuntu-latest
 
     strategy:
