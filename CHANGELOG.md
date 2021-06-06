@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+
+- feat: allow CommonJS imports again
+- chore: use esbuild
+
 ## 2.0.4
 
 - chore: bump dependencies
