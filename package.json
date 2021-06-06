@@ -1,26 +1,31 @@
 {
   "name": "pastebin-api",
-  "version": "2.0.4",
+  "version": "2.0.4-dev",
   "description": "A very simple pastebin npm package to interact with the pastebin api!",
   "license": "MIT",
   "author": {
     "name": "Dev-CasperTheGhost",
     "url": "https://caspertheghost.me"
   },
-  "type": "module",
   "main": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
   "engines": {
-    "node": ">=12.17"
+    "node": ">=12"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "tsc --watch",
-    "build": "rm -rf dist/ && tsc",
     "lint": "eslint . --ext .ts,.tsx",
-    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,yml}\" --ignore-path .gitignore"
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,yml}\" --ignore-path .gitignore",
+    "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
+    "types:esm": "cp dist/index.d.ts dist/index.mjs.d.ts",
+    "esbuild": "rm -rf dist/ && node esbuild.js && npm run types && npm run types:esm"
   },
   "keywords": [
     "pastebin",
@@ -48,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "dotenv": "^10.0.0",
+    "esbuild": "^0.12.6",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
