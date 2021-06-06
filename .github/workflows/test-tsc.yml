@@ -1,4 +1,4 @@
-name: Check prettier & ESLint
+name: Test TypeScript build
 
 on: [push, pull_request]
 
@@ -19,5 +19,5 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-      - name: Run lint
-        run: npm run lint
+      - name: Run test:tsc
+        run: npm run test:tsc

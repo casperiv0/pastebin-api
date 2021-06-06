@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "lint": "eslint . --ext .ts,.tsx",
+    "test:tsc": "tsc --noEmit",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,yml}\" --ignore-path .gitignore",
     "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
     "types:esm": "cp dist/index.d.ts dist/index.mjs.d.ts",
@@ -46,19 +47,15 @@
   },
   "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
-    "@casper124578/eslint-config": "^0.0.12",
+    "@casper124578/eslint-config": "^0.0.13",
     "@types/dotenv": "^8.2.0",
-    "@types/node": "^15.6.1",
+    "@types/node": "^15.12.1",
     "@types/node-fetch": "^2.5.10",
-    "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.26.0",
     "dotenv": "^10.0.0",
     "esbuild": "^0.12.6",
-    "eslint": "^7.27.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint": "^7.28.0",
     "nodemon": "^2.0.7",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "typescript": "^4.3.2"
   },
   "prettier": {

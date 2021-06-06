@@ -38,8 +38,6 @@ const client = new PasteClient("DEV_API_KEY");
 ## Create a Paste
 
 ```ts
-import PasteClient from "pastebin-api";
-
 const client = new PasteClient("DEV_API_KEY");
 
 const url = await client.createPaste({
