@@ -11,8 +11,18 @@
 
 ## Initialize The Client
 
+**ESM**
+
 ```ts
 import PasteClient from "pastebin-api";
+
+const client = new PasteClient("DEV_API_KEY");
+```
+
+**CommonJS**
+
+```ts
+const PasteClient = require("pastebin-api").default;
 
 const client = new PasteClient("DEV_API_KEY");
 ```
@@ -28,8 +38,6 @@ const client = new PasteClient("DEV_API_KEY");
 ## Create a Paste
 
 ```ts
-import PasteClient from "pastebin-api";
-
 const client = new PasteClient("DEV_API_KEY");
 
 const url = await client.createPaste({

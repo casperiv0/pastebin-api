@@ -1,5 +1,6 @@
-import { Client } from "discord.js";
-import PasteClient from "pastebin-api";
+/* eslint-disable */
+const { Client } = require("discord.js");
+const PasteClient = require("pastebin-api");
 
 const bot = new Client();
 const pasteClient = new PasteClient("DEV_API_KEY");
