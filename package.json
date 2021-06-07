@@ -1,6 +1,6 @@
 {
   "name": "pastebin-api",
-  "version": "2.1.0-dev",
+  "version": "2.1.0",
   "description": "A very simple pastebin npm package to interact with the pastebin api!",
   "license": "MIT",
   "author": {
