@@ -1,6 +1,6 @@
 {
   "name": "pastebin-api",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A very simple pastebin npm package to interact with the pastebin api!",
   "license": "MIT",
   "author": {
@@ -26,7 +26,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,yml}\" --ignore-path .gitignore",
     "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
     "types:esm": "cp dist/index.d.ts dist/index.mjs.d.ts",
-    "esbuild": "rm -rf dist/ && node esbuild.js && npm run types && npm run types:esm"
+    "build": "rm -rf dist/ && node esbuild.js && npm run types && npm run types:esm"
   },
   "keywords": [
     "pastebin",
@@ -49,10 +49,10 @@
   "devDependencies": {
     "@casper124578/eslint-config": "^0.0.13",
     "@types/dotenv": "^8.2.0",
-    "@types/node": "^15.12.1",
+    "@types/node": "^15.12.2",
     "@types/node-fetch": "^2.5.10",
     "dotenv": "^10.0.0",
-    "esbuild": "^0.12.6",
+    "esbuild": "^0.12.8",
     "eslint": "^7.28.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.3.1",

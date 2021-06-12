@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+
+- chore: bump dependencies
+
 ## 2.1.0
 
 - feat: allow CommonJS imports again
