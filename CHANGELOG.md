@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.0
+
+- refactor: use `TypeError` over `Error` where needed
+- refactor: use `Promise.reject` over `throw Error` where needed
+- refactor: remove unneeded `?.` in discord bot example
+- chore: bump dependencies
+- chore: use `actions/setup-node@v2` for CI
+
 ## 2.1.2
 
 - chore: bump dependencies

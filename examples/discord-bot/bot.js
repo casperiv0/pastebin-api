@@ -8,7 +8,7 @@ const pasteClient = new PasteClient("DEV_API_KEY");
 bot.on("message", async (message) => {
   if (message.author.bot) return;
   const prefix = "!";
-  const [arg, ...args] = message.content.slice(prefix?.length).trim().split(/ +/g);
+  const [arg, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
 
   if (args.length <= 0) {
     return message.channel.send("Woah! You need to specify some JavaScript code!");

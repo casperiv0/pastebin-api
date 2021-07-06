@@ -9,7 +9,7 @@ export default class PasteClient {
 
   constructor(apiKey: string) {
     if (typeof apiKey !== "string" || !apiKey) {
-      throw new Error("`apiKey` must be a string!");
+      throw new TypeError("`apiKey` must be a string!");
     }
 
     this.apiKey = apiKey;
@@ -23,7 +23,7 @@ export default class PasteClient {
    */
   async createPaste(options: CreateOptions): Promise<string> {
     if (options.name && options.name.length > 100) {
-      throw new Error("Name of paste cannot be longer than 100 characters");
+      throw new TypeError("Name of paste cannot be longer than 100 characters");
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -45,7 +45,7 @@ export default class PasteClient {
     const url = await res.text();
 
     if (url.toLowerCase().startsWith("bad api request")) {
-      throw new Error(url);
+      return Promise.reject(url);
     }
 
     return url;
@@ -60,12 +60,12 @@ export default class PasteClient {
   async getPastesByUser(options: GetPastesOptions): Promise<undefined | ParsedPaste[]> {
     if (options.limit) {
       if (options.limit < 1 || options.limit > 1000) {
-        throw Error("Limit cannot be lower than 1 or higher than 1000");
+        throw TypeError("Limit cannot be lower than 1 or higher than 1000");
       }
     }
 
     if (!options.userKey) {
-      throw Error("'userKey' must be provided (PasteClient#getPastesByUser)");
+      throw TypeError("'userKey' must be provided (PasteClient#getPastesByUser)");
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -81,7 +81,7 @@ export default class PasteClient {
 
     const data = await res.text();
     if (data.toLowerCase().startsWith("bad api request")) {
-      throw new Error(data);
+      return Promise.reject(data);
     }
 
     // if no pastes are found simply return an empty array
@@ -107,11 +107,11 @@ export default class PasteClient {
    */
   async deletePasteByKey(options: DeletePasteOptions): Promise<boolean> {
     if (!options.userKey) {
-      throw new Error("'userKey' must be provided (PasteClient#deletePasteByKey)");
+      throw new TypeError("'userKey' must be provided (PasteClient#deletePasteByKey)");
     }
 
     if (!options.pasteKey) {
-      throw new Error("'pasteKey' must be provided (PasteClient#deletePasteByKey)");
+      throw new TypeError("'pasteKey' must be provided (PasteClient#deletePasteByKey)");
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -127,7 +127,7 @@ export default class PasteClient {
 
     const data = await res.text();
     if (data.toLowerCase().startsWith("bad api request")) {
-      throw new Error(data);
+      return Promise.reject(data);
     }
 
     // paste was successfully removed
@@ -154,7 +154,7 @@ export default class PasteClient {
 
     const data = await res.text();
     if (data.toLowerCase().startsWith("bad api request")) {
-      throw new Error(data);
+      return Promise.reject(data);
     }
 
     return data;
