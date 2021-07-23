@@ -20,7 +20,7 @@ export default class PasteClient {
    * set the API domain
    * @param {string} domain The domain of your reverse proxy server.
    */
-  async setDomain(domain = "pastebin.com"): Promise<void> {
+  setDomain(domain = "pastebin.com"): void {
     this.domain = domain;
   }
 
