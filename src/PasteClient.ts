@@ -1,19 +1,31 @@
 import fetch, { BodyInit } from "node-fetch";
 import Parser from "fast-xml-parser";
-import { CreateOptions, GetPastesOptions, ParsedPaste, DeletePasteOptions } from "./interfaces";
+import {
+  CreateOptions,
+  GetPastesOptions,
+  ParsedPaste,
+  DeletePasteOptions,
+  ClientOptions,
+} from "./interfaces";
 
 export default class PasteClient {
   private apiKey: string;
+
   private domain = "pastebin.com";
   private pasteBinUrl = `https://${this.domain}/api/api_post.php`;
   private loginUrl = `https://${this.domain}/api/api_login.php`;
 
-  constructor(apiKey: string) {
-    if (typeof apiKey !== "string" || !apiKey) {
+  constructor(options: string | ClientOptions) {
+    if (!options) {
       throw new TypeError("`apiKey` must be a string!");
     }
 
-    this.apiKey = apiKey;
+    if (typeof options === "string") {
+      this.apiKey = options;
+    } else {
+      this.apiKey = options.apiKey;
+      this.domain = options.domain ?? "pastebin.com";
+    }
   }
 
   /**

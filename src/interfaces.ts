@@ -287,6 +287,18 @@ export type Publicity = 0 | 1 | 2;
  */
 export type ExpireDate = "N" | "10M" | "1H" | "1D" | "1W" | "2W" | "1M" | "6M" | "1Y";
 
+export interface ClientOptions {
+  /**
+   * the API key
+   */
+  apiKey: string;
+
+  /**
+   * the domain of your reverse proxy server
+   */
+  domain?: string;
+}
+
 export interface CreateOptions {
   publicity?: Publicity;
   expireDate?: ExpireDate;

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0
+
+- feat: support use custom domain (Thanks [@Zxilly](https://github.com/Zxilly))
+
 ## 2.2.0
 
 - refactor: use `TypeError` over `Error` where needed
