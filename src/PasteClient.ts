@@ -4,8 +4,9 @@ import { CreateOptions, GetPastesOptions, ParsedPaste, DeletePasteOptions } from
 
 export default class PasteClient {
   private apiKey: string;
-  private pasteBinUrl = "https://pastebin.com/api/api_post.php";
-  private loginUrl = "https://pastebin.com/api/api_login.php";
+  private domain = "pastebin.com";
+  private pasteBinUrl = `https://${this.domain}/api/api_post.php`;
+  private loginUrl = `https://${this.domain}/api/api_login.php`;
 
   constructor(apiKey: string) {
     if (typeof apiKey !== "string" || !apiKey) {
@@ -13,6 +14,14 @@ export default class PasteClient {
     }
 
     this.apiKey = apiKey;
+  }
+
+  /**
+   * set the API domain
+   * @param {string} domain The domain of your reverse proxy server.
+   */
+  async setDomain(domain = "pastebin.com"): Promise<void> {
+    this.domain = domain;
   }
 
   /**
