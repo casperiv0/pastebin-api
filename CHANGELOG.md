@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.1
+
+- chore: bump dependencies
+
 ## 2.3.0
 
 - feat: support use custom domain (Thanks [@Zxilly](https://github.com/Zxilly))
