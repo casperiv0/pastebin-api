@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.2
+
+- chore: update example
+- chore: bump dependencies
+
 ## 2.3.1
 
 - chore: bump dependencies

@@ -1,6 +1,6 @@
 {
   "name": "pastebin-api",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "A very simple pastebin npm package to interact with the pastebin api!",
   "license": "MIT",
   "author": {
@@ -49,10 +49,10 @@
   "devDependencies": {
     "@casper124578/eslint-config": "^0.0.16",
     "@types/dotenv": "^8.2.0",
-    "@types/node": "^16.4.9",
+    "@types/node": "^16.4.13",
     "@types/node-fetch": "^2.5.12",
     "dotenv": "^10.0.0",
-    "esbuild": "^0.12.17",
+    "esbuild": "^0.12.18",
     "eslint": "^7.32.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
