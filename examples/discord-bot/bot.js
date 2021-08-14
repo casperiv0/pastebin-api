@@ -5,8 +5,6 @@ const PasteClient = require("pastebin-api");
 const bot = new Client({ intents: ["GUILDS"] });
 const pasteClient = new PasteClient("DEV_API_KEY");
 
-bot.on("ready", () => {});
-
 bot.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
 
@@ -45,31 +43,9 @@ bot.on("ready", async () => {
         type: "STRING",
       },
       {
-        name: "expireDate",
+        name: "expire-date",
         required: false,
         description: "When the paste will expire",
-        choices: [
-          {
-            name: "Never",
-            value: "N",
-          },
-          {
-            name: "10 Minutes",
-            value: "10M",
-          },
-          {
-            name: "1 Hour",
-            value: "1H",
-          },
-          {
-            name: "1 Week",
-            value: "1W",
-          },
-          {
-            name: "2 Weeks",
-            value: "2W",
-          },
-        ],
         choices: [
           {
             name: "Never",
