@@ -6,7 +6,7 @@ import {
   ParsedPaste,
   DeletePasteOptions,
   ClientOptions,
-} from "./interfaces";
+} from "./interfaces.js";
 
 export default class PasteClient {
   private apiKey: string;
@@ -17,7 +17,7 @@ export default class PasteClient {
 
   constructor(options: string | ClientOptions) {
     if (!options) {
-      throw new TypeError("`apiKey` must be a string!");
+      throw new TypeError("`options` must be a string or an object!");
     }
 
     if (typeof options === "string") {
