@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.4
+
+- chore: bump dependencies
+
 ## 2.3.3
 
 - fix: correct error message for options
