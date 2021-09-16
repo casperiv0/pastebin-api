@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.3.6
+
+- Bump dependencies
+
+## 2.3.5
+
+- Fix cjs `node-fetch` ESM import
+
 ## 2.3.4
 
 - chore: bump dependencies
