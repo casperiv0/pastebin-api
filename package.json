@@ -52,7 +52,7 @@
     "@types/node": "^16.9.1",
     "@types/node-fetch": "^2.5.12",
     "dotenv": "^10.0.0",
-    "esbuild": "^0.12.28",
+    "esbuild": "^0.13.3",
     "eslint": "^7.32.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1",
