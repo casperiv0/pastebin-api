@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.0
+
+- Bump dependencies
+- Bump `node-fetch` to `3.0.0`.
+  - **->** `pastebin-api` still supports cjs. It may not work on older node versions though.
+
 ## 2.3.6
 
 - Bump dependencies

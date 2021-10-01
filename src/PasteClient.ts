@@ -1,6 +1,7 @@
-import fetch, { BodyInit } from "node-fetch";
 import Parser from "fast-xml-parser";
-import {
+import type { BodyInit } from "node-fetch";
+import { fetch } from "./fetch.js";
+import type {
   CreateOptions,
   GetPastesOptions,
   ParsedPaste,
