@@ -1,6 +1,11 @@
 # Changelog
 
-## 2.5.1
+## 2.6.0
+
+- Bump dependencies
+- feat: support getting raw paste [docs](https://github.com/Dev-CasperTheGhost/pastebin-api/tree/main/docs#get-raw-paste)
+
+## 2.5.0
 
 - Bump dependencies
 
