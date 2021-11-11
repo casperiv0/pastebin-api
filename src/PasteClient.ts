@@ -7,6 +7,7 @@ import type {
   ParsedPaste,
   DeletePasteOptions,
   ClientOptions,
+  GetRawPasteOptions,
 } from "./interfaces.js";
 
 export default class PasteClient {
@@ -15,6 +16,7 @@ export default class PasteClient {
   private domain = "pastebin.com";
   private pasteBinUrl = `https://${this.domain}/api/api_post.php`;
   private loginUrl = `https://${this.domain}/api/api_login.php`;
+  private rawUrl = `https://${this.domain}/api/api_raw.php`;
 
   constructor(options: string | ClientOptions) {
     if (!options) {
@@ -154,6 +156,40 @@ export default class PasteClient {
 
     // paste was successfully removed
     return data.toLowerCase().startsWith("paste removed");
+  }
+
+  /**
+   * return raw paste by it's key
+   * @param {GetRawPasteOptions} options
+   * @returns {string} The raw paste
+   * @see [https://pastebin.com/doc_api#14](https://pastebin.com/doc_api#14)
+   */
+  async getRawPasteByKey(options: GetRawPasteOptions): Promise<string> {
+    if (!options.userKey) {
+      throw new TypeError("'userKey' must be provided (PasteClient#getRawPasteByKey)");
+    }
+
+    if (!options.pasteKey) {
+      throw new TypeError("'pasteKey' must be provided (PasteClient#getRawPasteByKey)");
+    }
+
+    const res = await fetch(this.rawUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({
+        api_option: "show_paste",
+        api_dev_key: this.apiKey,
+        api_user_key: options.userKey,
+        api_paste_key: options.pasteKey,
+      }),
+    });
+
+    const data = await res.text();
+    if (data.toLowerCase().startsWith("bad api request")) {
+      return Promise.reject(data);
+    }
+
+    return data;
   }
 
   /**

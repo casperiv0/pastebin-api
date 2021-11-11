@@ -319,6 +319,8 @@ export interface DeletePasteOptions {
   pasteKey: string;
 }
 
+export type GetRawPasteOptions = DeletePasteOptions;
+
 export interface ParsedPaste {
   paste_key: string;
   paste_date: number;

@@ -139,6 +139,32 @@ console.log(deleted);
 
 [**Back To Top**](#documentation)
 
+## Get Raw Paste
+
+```js
+const client = new PasteClient("DEV_API_KEY");
+
+// Login to get the token
+const token = await client.login("user_name", "user_password");
+
+const data = await client.getRawPasteByKey({
+  pasteKey: "paste-key-here",
+  userKey: token,
+});
+
+//=> raw paste string
+console.log(data);
+```
+
+### Options
+
+| Name       | Type     | Description                                                                 | Required |
+| ---------- | -------- | --------------------------------------------------------------------------- | -------- |
+| `userKey`  | `string` | The token returned from [PasteClient#login](#login-using-name-and-password) | `true`   |
+| `pasteKey` | `string` | The key (id) of the paste                                                   | `true`   |
+
+[**Back To Top**](#documentation)
+
 ## Publicity Types
 
 | Value | Type     | Description                                                   |
