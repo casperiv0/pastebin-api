@@ -6,6 +6,7 @@
 - [Login using name and password](#login-using-name-and-password)
 - [Get all pastes from user](#get-pastes-from-user)
 - [Delete a paste](#delete-a-paste)
+- [Get Raw Paste](#get-raw-paste)
 - [Publicity Types](#publicity-types)
 - [Expire Date Types](#expire-date-types)
 
