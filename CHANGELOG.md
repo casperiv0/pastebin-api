@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.1
+
+- Bump dependencies
+
 ## 2.6.0
 
 - Bump dependencies
