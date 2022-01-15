@@ -6,4 +6,5 @@ export default defineConfig({
   dts: true,
   outDir: "dist",
   format: ["esm", "cjs"],
+  target: "node12",
 });

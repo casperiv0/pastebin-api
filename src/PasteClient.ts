@@ -1,5 +1,4 @@
 import { XMLParser as Parser } from "fast-xml-parser";
-import type { BodyInit } from "node-fetch";
 import { fetch } from "./fetch.js";
 import type {
   CreateOptions,
@@ -67,7 +66,7 @@ export default class PasteClient {
       }),
     });
 
-    const url = await res.text();
+    const url = await res.body.text();
 
     if (url.toLowerCase().startsWith("bad api request")) {
       return Promise.reject(url);
@@ -104,7 +103,7 @@ export default class PasteClient {
       }),
     });
 
-    const data = await res.text();
+    const data = await res.body.text();
     if (data.toLowerCase().startsWith("bad api request")) {
       return Promise.reject(data);
     }
@@ -150,7 +149,7 @@ export default class PasteClient {
       }),
     });
 
-    const data = await res.text();
+    const data = await res.body.text();
     if (data.toLowerCase().startsWith("bad api request")) {
       return Promise.reject(data);
     }
@@ -185,7 +184,7 @@ export default class PasteClient {
       }),
     });
 
-    const data = await res.text();
+    const data = await res.body.text();
     if (data.toLowerCase().startsWith("bad api request")) {
       return Promise.reject(data);
     }
@@ -211,7 +210,7 @@ export default class PasteClient {
       }),
     });
 
-    const data = await res.text();
+    const data = await res.body.text();
     if (data.toLowerCase().startsWith("bad api request")) {
       return Promise.reject(data);
     }
@@ -223,7 +222,7 @@ export default class PasteClient {
    * encodes data to valid URI
    * @param data The data you want to encode
    */
-  private encode(data: { [key: string]: unknown }): BodyInit {
+  private encode(data: { [key: string]: unknown }): string {
     let string = "";
 
     for (const [key, value] of Object.entries(data)) {
