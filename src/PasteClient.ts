@@ -1,4 +1,4 @@
-import Parser from "fast-xml-parser";
+import { XMLParser as Parser } from "fast-xml-parser";
 import type { BodyInit } from "node-fetch";
 import { fetch } from "./fetch.js";
 import type {
@@ -17,6 +17,7 @@ export default class PasteClient {
   private pasteBinUrl = `https://${this.domain}/api/api_post.php`;
   private loginUrl = `https://${this.domain}/api/api_login.php`;
   private rawUrl = `https://${this.domain}/api/api_raw.php`;
+  protected parser = new Parser();
 
   constructor(options: string | ClientOptions) {
     if (!options) {
@@ -113,7 +114,7 @@ export default class PasteClient {
       return [];
     }
 
-    const parsed = Parser.parse(data);
+    const parsed = this.parser.parse(data);
 
     // it can either return an array or an object
     if (Array.isArray(parsed["paste"])) {
