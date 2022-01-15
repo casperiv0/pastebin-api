@@ -1,10 +1,9 @@
 # pastebin-api
 
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/pastebin-api)
 ![License](https://img.shields.io/github/license/dev-caspertheghost/pastebin-api)
 ![Downloads](https://img.shields.io/npm/dw/pastebin-api)
 
-A very simple pastebin npm package to interact with the pastebin api!
+A very simple npm package to interact with the pastebin api.
 
 ## Installation
 
@@ -34,9 +33,9 @@ const client = new PasteClient("DEV_KEY_HERE");
 /* ... */
 ```
 
-## Docs
+## Documentation
 
-[You can checkout the docs here](docs/README.md)
+[You can checkout the documentation here](docs/README.md)
 
 ## Support
 
