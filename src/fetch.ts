@@ -1,6 +1,8 @@
-import type { RequestInit } from "node-fetch";
+import { request, Dispatcher } from "undici";
 
-export const fetch = async (url: string, init: RequestInit) => {
-  const { default: fetch } = await import("node-fetch");
-  return fetch(url, init);
-};
+export async function fetch(
+  url: string,
+  options: Omit<Dispatcher.DispatchOptions, "path" | "origin">,
+) {
+  return request(url, options);
+}

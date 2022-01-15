@@ -15,7 +15,6 @@ if (!USER_NAME || !USER_PASSWORD) {
   throw Error("No user credentials were provided for the test");
 }
 
-// const client = new PasteClient({ apiKey: KEY, domain: "https://google.com" });
 const client = new PasteClient(KEY);
 
 async function test() {
@@ -28,11 +27,11 @@ async function test() {
 
   // console.log(deleted);
 
-  // const pastes = await client.getPastesByUser({
-  //   userKey: token,
-  // });
+  const pastes = await client.getPastesByUser({
+    userKey: token,
+  });
 
-  // console.log(pastes);
+  console.log(pastes);
 
   const data = await client.getRawPasteByKey({
     pasteKey: "CwLWsp26",
