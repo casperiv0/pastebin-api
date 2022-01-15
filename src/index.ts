@@ -2,4 +2,4 @@ import PasteClient from "./PasteClient.js";
 
 export { PasteClient };
 export default PasteClient;
-export * from "./interfaces";
+export * from "./types";

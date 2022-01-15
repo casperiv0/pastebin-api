@@ -27,11 +27,11 @@ async function test() {
 
   // console.log(deleted);
 
-  // const pastes = await client.getPastesByUser({
-  //   userKey: token,
-  // });
+  const pastes = await client.getPastesByUser({
+    userKey: token,
+  });
 
-  // console.log(pastes);
+  console.log(pastes);
 
   const data = await client.getRawPasteByKey({
     pasteKey: "CwLWsp26",

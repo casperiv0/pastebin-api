@@ -7,7 +7,7 @@ import type {
   DeletePasteOptions,
   ClientOptions,
   GetRawPasteOptions,
-} from "./interfaces.js";
+} from "./types.js";
 
 export default class PasteClient {
   private apiKey: string;

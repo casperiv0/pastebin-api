@@ -1,7 +1,7 @@
 {
   "name": "pastebin-api",
-  "version": "2.6.1",
-  "description": "A very simple pastebin npm package to interact with the pastebin api!",
+  "version": "3.0.0",
+  "description": "A very simple npm package to interact with the pastebin api.",
   "license": "MIT",
   "author": {
     "name": "Dev-CasperTheGhost",
@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "format:quick": "pretty-quick --staged --pattern \"packages/**/*.{js,jsx,ts,tsx,md,css,json}\"",
+    "test": "npx ts-node ./tests/index.test.ts",
     "format": "prettier --write \"./**/**/*.{js,jsx,ts,tsx,md,css,json}\" --ignore-path .gitignore",
     "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
     "test-tsc": "tsc --noEmit",
