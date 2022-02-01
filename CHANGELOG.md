@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1
+
+- Bump dependencies
+
 ## 3.0.0
 
 - Replace `node-fetch` with `undici` ([17a5344](https://github.com/Dev-CasperTheGhost/pastebin-api/commit/82ed0e522a82acfdaf982edb50e771020de9df2b))
