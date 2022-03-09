@@ -1,8 +1,16 @@
 # Changelog
 
-## 3.0.1
+## 3.0.3
 
 - Minor code improvements
+- Bump dependencies
+
+## 3.0.2
+
+- Bump dependencies
+
+## 3.0.1
+
 - Bump dependencies
 
 ## 3.0.0
