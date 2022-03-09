@@ -84,12 +84,12 @@ export default class PasteClient {
   async getPastesByUser(options: GetPastesOptions): Promise<undefined | ParsedPaste[]> {
     if (options.limit) {
       if (options.limit < 1 || options.limit > 1000) {
-        throw TypeError("Limit cannot be lower than 1 or higher than 1000");
+        throw new TypeError("Limit cannot be lower than 1 or higher than 1000");
       }
     }
 
     if (!options.userKey) {
-      throw TypeError("'userKey' must be provided (PasteClient#getPastesByUser)");
+      throw new TypeError("'userKey' must be provided (PasteClient#getPastesByUser)");
     }
 
     const res = await fetch(this.pasteBinUrl, {
