@@ -1,4 +1,3 @@
-/* eslint-disable */
 const { Client } = require("discord.js");
 const PasteClient = require("pastebin-api");
 

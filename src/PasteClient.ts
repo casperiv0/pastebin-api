@@ -222,7 +222,7 @@ export default class PasteClient {
    * encodes data to valid URI
    * @param data The data you want to encode
    */
-  private encode(data: { [key: string]: unknown }): string {
+  private encode(data: Record<string, unknown>): string {
     let string = "";
 
     for (const [key, value] of Object.entries(data)) {
