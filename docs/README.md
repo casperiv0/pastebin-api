@@ -30,9 +30,10 @@ const client = new PasteClient("DEV_API_KEY");
 
 ### Options
 
-| Name        | Type     | Description                                        | Required |
-| ----------- | -------- | -------------------------------------------------- | -------- |
-| `devApiKey` | `string` | [Your dev api key](https://pastebin.com/doc_api#1) | `true`   |
+| Name     | Type     | Description                                        | Required |
+| -------- | -------- | -------------------------------------------------- | -------- |
+| `apiKey` | `string` | [Your dev api key](https://pastebin.com/doc_api#1) | `true`   |
+| `domain` | `string` | Optional domain name to a custom pastebin API      | `false`  |
 
 [**Back To Top**](#documentation)
 

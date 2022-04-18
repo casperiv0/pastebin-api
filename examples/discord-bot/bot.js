@@ -42,6 +42,7 @@ bot.on("ready", async () => {
         type: "STRING",
       },
       {
+        type: "STRING",
         name: "expire-date",
         required: false,
         description: "When the paste will expire",

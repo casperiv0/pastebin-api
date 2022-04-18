@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "discord.js": "^13.6.0",
-    "pastebin-api": "latest"
+    "pastebin-api": "^4.0.0"
   }
 }
