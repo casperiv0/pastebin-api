@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import PasteClient from "../dist/index";
+import { PasteClient } from "../dist/index";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ if (!USER_NAME || !USER_PASSWORD) {
   throw Error("No user credentials were provided for the test");
 }
 
-const client = new PasteClient(KEY);
+const client = new PasteClient({ apiKey: KEY });
 
 async function test() {
   const token = await client.login(USER_NAME!, USER_PASSWORD!);
@@ -42,10 +42,10 @@ async function test() {
 
   // const url = await client.createPaste({
   //   code: "const x = 'hello world!'",
-  //   expireDate: "N",
+  //   expireDate: ExpireDate.Never,
   //   format: "typescript",
   //   name: "hello.ts",
-  //   publicity: 0,
+  //   publicity: Publicity.Private,
   //   apiUserKey: token,
   // });
 

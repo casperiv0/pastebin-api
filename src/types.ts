@@ -267,25 +267,25 @@ export type ApiPasteFormat =
   | "zxbasic";
 
 /**
- * 0 = public
- * 1 = unlisted
- * 2 = private
+ * the publicity status of a paste
  */
-export type Publicity = 0 | 1 | 2;
+export enum Publicity {
+  Public = 0,
+  Unlisted = 1,
+  Private = 2,
+}
 
-// eslint-disable-next-line capitalized-comments
-/**
- * N = never
- * 10M = 10 Minutes
- * 1H = 1 hour
- * 1D = 1 day
- * 1W = 1 week
- * 2W = 2 weeks
- * 1M = 1 month
- * 6M = 6 months
- * 1Y = 1 year
- */
-export type ExpireDate = "N" | "10M" | "1H" | "1D" | "1W" | "2W" | "1M" | "6M" | "1Y";
+export enum ExpireDate {
+  Never = "N",
+  TenMinutes = "10M",
+  OneHour = "1H",
+  OneDay = "1D",
+  OneWeek = "1W",
+  TwoWeeks = "2W",
+  OneMonth = "1M",
+  SixMonths = "6M",
+  OneYear = "1Y",
+}
 
 export interface ClientOptions {
   /**
@@ -300,9 +300,25 @@ export interface ClientOptions {
 }
 
 export interface CreateOptions {
+  /**
+   * the publicity status of the paste.
+   * @default 0 (public)
+   */
   publicity?: Publicity;
+  /**
+   * the expire date of the paste
+   * @default "N" (Never)
+   */
   expireDate?: ExpireDate;
+  /**
+   * the format of the paste
+   * @default "javascript"
+   */
   format?: ApiPasteFormat;
+  /**
+   * the name of the paste
+   * @default "Untitled"
+   */
   name?: string;
   apiUserKey?: string;
   folderKey?: string;

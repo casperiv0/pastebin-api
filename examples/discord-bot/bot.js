@@ -1,7 +1,7 @@
-const { Client } = require("discord.js");
-const PasteClient = require("pastebin-api");
+const { Client, Intents } = require("discord.js");
+const { PasteClient, Publicity, ExpireDate } = require("pastebin-api");
 
-const bot = new Client({ intents: ["GUILDS"] });
+const bot = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const pasteClient = new PasteClient("DEV_API_KEY");
 
 bot.on("interactionCreate", async (interaction) => {
@@ -9,7 +9,7 @@ bot.on("interactionCreate", async (interaction) => {
 
   if (interaction.commandName === "create-paste") {
     const code = interaction.options.getString("code", true);
-    const expireDate = interaction.options.getString("expire-date") ?? "N";
+    const expireDate = interaction.options.getString("expire-date") ?? ExpireDate.Never;
     const name = interaction.options.getString("file-name") ?? "unknown";
 
     const url = await pasteClient.createPaste({
@@ -17,7 +17,7 @@ bot.on("interactionCreate", async (interaction) => {
       expireDate,
       format: "javascript",
       name: `${name}.js`,
-      publicity: 0,
+      publicity: Publicity.Unlisted,
     });
 
     await interaction.reply(url);
@@ -48,35 +48,35 @@ bot.on("ready", async () => {
         choices: [
           {
             name: "Never",
-            value: "N",
+            value: ExpireDate.Never,
           },
           {
             name: "10 Minutes",
-            value: "10M",
+            value: ExpireDate.TenMinutes,
           },
           {
             name: "1 Hour",
-            value: "1H",
+            value: ExpireDate.OneHour,
           },
           {
             name: "1 Week",
-            value: "1W",
+            value: ExpireDate.OneWeek,
           },
           {
             name: "2 Weeks",
-            value: "2W",
+            value: ExpireDate.TwoWeeks,
           },
           {
             name: "1 Month",
-            value: "1M",
+            value: ExpireDate.OneMonth,
           },
           {
             name: "6 Months",
-            value: "6M",
+            value: ExpireDate.SixMonths,
           },
           {
             name: "1 Year",
-            value: "1Y",
+            value: ExpireDate.OneYear,
           },
         ],
       },

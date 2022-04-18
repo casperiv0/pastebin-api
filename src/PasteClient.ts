@@ -1,4 +1,4 @@
-import { XMLParser as Parser } from "fast-xml-parser";
+import { XMLParser } from "fast-xml-parser";
 import { fetch } from "./fetch.js";
 import type {
   CreateOptions,
@@ -9,18 +9,29 @@ import type {
   GetRawPasteOptions,
 } from "./types.js";
 
+const ERROR_PREFIX = "[pastebin-api]:" as const;
+
 export default class PasteClient {
   private apiKey: string;
-
   private domain = "pastebin.com";
-  private pasteBinUrl = `https://${this.domain}/api/api_post.php`;
-  private loginUrl = `https://${this.domain}/api/api_login.php`;
-  private rawUrl = `https://${this.domain}/api/api_raw.php`;
-  protected parser = new Parser();
+
+  protected parser = new XMLParser();
+
+  private get pasteBinUrl() {
+    return `https://${this.domain}/api/api_post.php`;
+  }
+
+  private get loginUrl() {
+    return `https://${this.domain}/api/api_login.php`;
+  }
+
+  private get rawUrl() {
+    return `https://${this.domain}/api/api_raw.php`;
+  }
 
   constructor(options: string | ClientOptions) {
     if (!options) {
-      throw new TypeError("`options` must be a string or an object!");
+      throw new TypeError(`${ERROR_PREFIX} 'options' must be type 'string' or type 'object'`);
     }
 
     if (typeof options === "string") {
@@ -32,14 +43,6 @@ export default class PasteClient {
   }
 
   /**
-   * set the API domain
-   * @param {string} domain The domain of your reverse proxy server.
-   */
-  setDomain(domain = "pastebin.com"): void {
-    this.domain = domain;
-  }
-
-  /**
    * creates the paste
    * @param {Options} options The options for the paste
    * @returns {Promise<string>} The URL of the created paste
@@ -47,7 +50,7 @@ export default class PasteClient {
    */
   async createPaste(options: CreateOptions): Promise<string> {
     if (options.name && options.name.length > 100) {
-      throw new TypeError("Name of paste cannot be longer than 100 characters");
+      throw new TypeError(`${ERROR_PREFIX} Name of paste cannot be longer than 100 characters`);
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -82,14 +85,14 @@ export default class PasteClient {
    * @see [https://pastebin.com/doc_api#10](https://pastebin.com/doc_api#10)
    */
   async getPastesByUser(options: GetPastesOptions): Promise<undefined | ParsedPaste[]> {
-    if (options.limit) {
-      if (options.limit < 1 || options.limit > 1000) {
-        throw new TypeError("Limit cannot be lower than 1 or higher than 1000");
-      }
+    if (options.limit && (options.limit < 1 || options.limit > 1000)) {
+      throw new TypeError(`${ERROR_PREFIX} Limit cannot be lower than 1 or higher than 1000`);
     }
 
     if (!options.userKey) {
-      throw new TypeError("'userKey' must be provided (PasteClient#getPastesByUser)");
+      throw new TypeError(
+        `${ERROR_PREFIX} 'userKey' must be provided (PasteClient#getPastesByUser)`,
+      );
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -131,11 +134,15 @@ export default class PasteClient {
    */
   async deletePasteByKey(options: DeletePasteOptions): Promise<boolean> {
     if (!options.userKey) {
-      throw new TypeError("'userKey' must be provided (PasteClient#deletePasteByKey)");
+      throw new TypeError(
+        `${ERROR_PREFIX} 'userKey' must be provided (PasteClient#deletePasteByKey)`,
+      );
     }
 
     if (!options.pasteKey) {
-      throw new TypeError("'pasteKey' must be provided (PasteClient#deletePasteByKey)");
+      throw new TypeError(
+        `${ERROR_PREFIX} 'pasteKey' must be provided (PasteClient#deletePasteByKey)`,
+      );
     }
 
     const res = await fetch(this.pasteBinUrl, {
@@ -166,11 +173,15 @@ export default class PasteClient {
    */
   async getRawPasteByKey(options: GetRawPasteOptions): Promise<string> {
     if (!options.userKey) {
-      throw new TypeError("'userKey' must be provided (PasteClient#getRawPasteByKey)");
+      throw new TypeError(
+        `${ERROR_PREFIX} 'userKey' must be provided (PasteClient#getRawPasteByKey)`,
+      );
     }
 
     if (!options.pasteKey) {
-      throw new TypeError("'pasteKey' must be provided (PasteClient#getRawPasteByKey)");
+      throw new TypeError(
+        `${ERROR_PREFIX} 'pasteKey' must be provided (PasteClient#getRawPasteByKey)`,
+      );
     }
 
     const res = await fetch(this.rawUrl, {

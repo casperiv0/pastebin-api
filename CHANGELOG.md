@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.0.0
+
+- **breaking:** Remove `PasteClient#setDomain`, pass down custom domain via `ClientOptions`.
+- **breaking:** `Publicity` is now an enum.
+- **breaking:** `ExpireDate` is now an enum.
+- Improve error messages
+- Bump dependencies
+
 ## 3.0.4
 
 - Bump dependencies

@@ -1,17 +1,14 @@
 {
   "name": "pastebin-api",
-  "version": "3.0.4",
+  "version": "4.0.0",
   "description": "A very simple npm package to interact with the pastebin api.",
   "license": "MIT",
-  "author": {
-    "name": "Dev-CasperTheGhost",
-    "url": "https://www.caspertheghost.me"
-  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "exports": {
     "require": "./dist/index.js",
-    "import": "./dist/index.mjs"
+    "import": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
   },
   "engines": {
     "node": ">=12"
@@ -19,6 +16,10 @@
   "files": [
     "dist"
   ],
+  "author": {
+    "name": "Dev-CasperTheGhost",
+    "url": "https://www.caspertheghost.me"
+  },
   "scripts": {
     "test": "npx ts-node ./tests/index.test.ts",
     "format": "prettier --write \"./**/**/*.{js,jsx,ts,tsx,md,css,json}\" --ignore-path .gitignore",
@@ -45,13 +46,13 @@
   },
   "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
-    "@casper124578/eslint-config": "^4.1.0",
-    "@types/node": "^17.0.23",
+    "@casper124578/eslint-config": "^4.2.0",
+    "@types/node": "^17.0.24",
     "dotenv": "^16.0.0",
-    "eslint": "^8.12.0",
-    "prettier": "^2.6.1",
+    "eslint": "^8.13.0",
+    "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "tsup": "^5.12.1",
+    "tsup": "^5.12.5",
     "typescript": "^4.6.3"
   },
   "prettier": {
