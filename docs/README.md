@@ -40,14 +40,15 @@ const client = new PasteClient("DEV_API_KEY");
 ## Create a Paste
 
 ```ts
+import { PasteClient, Publicity, ExpireDate } from "pastebin-api";
 const client = new PasteClient("DEV_API_KEY");
 
 const url = await client.createPaste({
   code: "const something = 'Hello World!'",
-  expireDate: "N",
+  expireDate: ExpireDate.Never,
   format: "javascript",
   name: "something.js",
-  publicity: 0,
+  publicity: Publicity.Public,
 });
 
 console.log(url);
