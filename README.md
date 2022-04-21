@@ -22,12 +22,10 @@ yarn add pastebin-api
 ## Usage
 
 ```js
-import PasteClient from "pastebin-api";
-// const PasteClient = require("pastebin-api").default; // using CommonJS
+import { PasteClient, Publicity, ExpireDate } from "pastebin-api";
+// const { PasteClient, Publicity, ExpireDate } = require("pastebin-api").default; // using CommonJS
 
-// Or (named imports)
-import { PasteClient } from "pastebin-api";
-
+// Tip: load dev key from a `.env` file
 const client = new PasteClient("DEV_KEY_HERE");
 
 /* ... */
