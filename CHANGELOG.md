@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1
+
+- Bump dependencies
+
 ## 4.0.0
 
 - **breaking:** Remove `PasteClient#setDomain`, pass down custom domain via `ClientOptions`.
