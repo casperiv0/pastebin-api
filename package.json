@@ -1,6 +1,6 @@
 {
   "name": "pastebin-api",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "A very simple npm package to interact with the pastebin api.",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -11,7 +11,7 @@
     "types": "./dist/index.d.ts"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "files": [
     "dist"
@@ -34,8 +34,8 @@
     "pastebin-api"
   ],
   "dependencies": {
-    "fast-xml-parser": "^4.0.7",
-    "undici": "^5.0.0"
+    "fast-xml-parser": "^4.0.8",
+    "undici": "^5.4.0"
   },
   "repository": {
     "type": "git",
@@ -46,14 +46,14 @@
   },
   "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
-    "@casper124578/eslint-config": "^4.3.0",
-    "@types/node": "^17.0.30",
-    "dotenv": "^16.0.0",
-    "eslint": "^8.14.0",
+    "@casper124578/eslint-config": "^4.4.0",
+    "@types/node": "^17.0.38",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.16.0",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "tsup": "^5.12.6",
-    "typescript": "^4.6.4"
+    "tsup": "^6.0.1",
+    "typescript": "^4.7.2"
   },
   "prettier": {
     "semi": true,

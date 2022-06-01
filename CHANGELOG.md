@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.0.0
+
+- Bump dependencies
+- **BREAKING:** require node **v14**.
+
 ## 4.0.1
 
 - Bump dependencies

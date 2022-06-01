@@ -19,6 +19,9 @@ npm i pastebin-api
 yarn add pastebin-api
 ```
 
+> **Note**
+> `pastebin-api` requires node.js version 14 or higher.
+
 ## Usage
 
 ```js
