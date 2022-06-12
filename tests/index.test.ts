@@ -18,7 +18,7 @@ if (!USER_NAME || !USER_PASSWORD) {
 const client = new PasteClient({ apiKey: KEY });
 
 async function test() {
-  const token = await client.login(USER_NAME!, USER_PASSWORD!);
+  const token = await client.login({ name: USER_NAME!, password: USER_PASSWORD! });
 
   // const deleted = await client.deletePasteByKey({
   //   pasteKey: "XawZVJdA",

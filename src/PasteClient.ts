@@ -7,6 +7,7 @@ import type {
   DeletePasteOptions,
   ClientOptions,
   GetRawPasteOptions,
+  LoginOptions,
 } from "./types.js";
 
 const ERROR_PREFIX = "[pastebin-api]:" as const;
@@ -84,7 +85,7 @@ export default class PasteClient {
    * @returns An array of all the user's pastes
    * @see [https://pastebin.com/doc_api#10](https://pastebin.com/doc_api#10)
    */
-  async getPastesByUser(options: GetPastesOptions): Promise<undefined | ParsedPaste[]> {
+  async getPastesByUser(options: GetPastesOptions): Promise<ParsedPaste[]> {
     if (options.limit && (options.limit < 1 || options.limit > 1000)) {
       throw new TypeError(`${ERROR_PREFIX} Limit cannot be lower than 1 or higher than 1000`);
     }
@@ -210,14 +211,14 @@ export default class PasteClient {
    * @returns The user token to use for other API routes
    * @see [https://pastebin.com/doc_api#9](https://pastebin.com/doc_api#9)
    */
-  async login(name: string, password: string): Promise<string> {
+  async login(options: LoginOptions): Promise<string> {
     const res = await fetch(this.loginUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({
         api_dev_key: this.apiKey,
-        api_user_name: name,
-        api_user_password: password,
+        api_user_name: options.name,
+        api_user_password: options.password,
       }),
     });
 

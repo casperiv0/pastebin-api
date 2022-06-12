@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.1.0
+
+- Bump dependencies
+- **BREAKING:** `PasteClient#login` now requires an object instead of 2 params.
+  ➡ `const token = await client.login({ name: "user_name", password: "user_password" });`
+
 ## 5.0.0
 
 - Bump dependencies

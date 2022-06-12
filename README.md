@@ -5,26 +5,32 @@
 
 A very simple npm package to interact with the pastebin api.
 
+**Features**
+
+- Create pastes with all the available API data
+- Fetch the raw contents of a paste
+- Fetch pastes from the authenticated user via a user login
+- Delete pastes from the authenticated user via a user login
+
 ## Installation
 
-### npm
-
 ```bash
-npm i pastebin-api
-```
+# npm
+npm install pastebin-api
 
-### yarn
-
-```bash
+# Yarn
 yarn add pastebin-api
+
+# pnpm
+pnpm add pastebin-api
 ```
 
-> **Note**
-> `pastebin-api` requires node.js version 14 or higher.
+> **Note** > `pastebin-api` requires node.js version 14 or higher.
 
 ## Usage
 
 ```js
+// src/main.js
 import { PasteClient, Publicity, ExpireDate } from "pastebin-api";
 // const { PasteClient, Publicity, ExpireDate } = require("pastebin-api").default; // using CommonJS
 

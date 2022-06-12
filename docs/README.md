@@ -73,7 +73,7 @@ console.log(url);
 ```js
 const client = new PasteClient("DEV_API_KEY");
 
-const token = await client.login("user_name", "user_password");
+const token = await client.login({ name: "user_name", password: "user_password" });
 
 // This is the user token that can be used to get all the user's pastes or delete one
 console.log(token);
@@ -94,7 +94,7 @@ console.log(token);
 const client = new PasteClient("DEV_API_KEY");
 
 // Login to get the token
-const token = await client.login("user_name", "user_password");
+const token = await client.login({ name: "user_name", password: "user_password" });
 
 // Get a limit of 1000 pastes from the user
 const pastes = await client.getPastesByUser({
@@ -121,7 +121,7 @@ console.log(pastes);
 const client = new PasteClient("DEV_API_KEY");
 
 // Login to get the token
-const token = await client.login("user_name", "user_password");
+const token = await client.login({ name: "user_name", password: "user_password" });
 
 // Will return a boolean if deleted
 const deleted = await client.deletePasteByKey({
@@ -148,7 +148,7 @@ console.log(deleted);
 const client = new PasteClient("DEV_API_KEY");
 
 // Login to get the token
-const token = await client.login("user_name", "user_password");
+const token = await client.login({ name: "user_name", password: "user_password" });
 
 const data = await client.getRawPasteByKey({
   pasteKey: "paste-key-here",
