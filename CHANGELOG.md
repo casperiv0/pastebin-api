@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.1.2
+
+- build(deps): bump undici from 5.5.1 to 5.8.0 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/107
+
 ## 5.1.1
 
 - Bump dependencies
