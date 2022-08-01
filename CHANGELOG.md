@@ -1,5 +1,12 @@
 # Changelog
 
+## 5.1.3
+
+- build(deps-dev): bump tsup from 6.1.3 to 6.2.1 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/110
+- build(deps-dev): bump @types/node from 18.0.6 to 18.6.3 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/109
+- build(deps-dev): bump eslint from 8.20.0 to 8.21.0 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/108
+- Bump dependencies
+
 ## 5.1.2
 
 - build(deps): bump undici from 5.5.1 to 5.8.0 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/107
