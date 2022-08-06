@@ -7,7 +7,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "^13.6.0",
-    "pastebin-api": "^4.0.0"
+    "discord.js": "^14.1.2",
+    "pastebin-api": "latest"
   }
 }

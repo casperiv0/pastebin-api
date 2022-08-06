@@ -1,7 +1,7 @@
-const { Client, Intents } = require("discord.js");
+const { Client, IntentsBitField, ApplicationCommandOptionType } = require("discord.js");
 const { PasteClient, Publicity, ExpireDate } = require("pastebin-api");
 
-const bot = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const bot = new Client({ intents: [IntentsBitField.Flags.Guilds] });
 const pasteClient = new PasteClient("DEV_API_KEY");
 
 bot.on("interactionCreate", async (interaction) => {
@@ -33,16 +33,16 @@ bot.on("ready", async () => {
         name: "code",
         required: true,
         description: "This will be the paste code",
-        type: "STRING",
+        type: ApplicationCommandOptionType.String,
       },
       {
         name: "name",
         required: false,
         description: "This will be the name of the paste",
-        type: "STRING",
+        type: ApplicationCommandOptionType.String,
       },
       {
-        type: "STRING",
+        type: ApplicationCommandOptionType.String,
         name: "expire-date",
         required: false,
         description: "When the paste will expire",
@@ -89,4 +89,4 @@ bot.on("ready", async () => {
   console.log("Bot is ready!");
 });
 
-bot.login("BOT_TOKEN");
+bot.login("NzMwMzk0NTQwNjE5MzMzNzEy.GdwEWQ.67SPQDKUO2fFF_IF_mL1E_vrH6m2vhXFp_yawQ");
