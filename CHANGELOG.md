@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.1.4
+
+- build(deps): bump undici from 5.8.0 to 5.8.2 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/111
+- bump dependencies
+
 ## 5.1.3
 
 - build(deps-dev): bump tsup from 6.1.3 to 6.2.1 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/110
