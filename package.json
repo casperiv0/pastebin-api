@@ -34,7 +34,7 @@
     "pastebin-api"
   ],
   "dependencies": {
-    "fast-xml-parser": "^4.0.9",
+    "fast-xml-parser": "^4.0.10",
     "undici": "^5.10.0"
   },
   "repository": {
@@ -47,13 +47,13 @@
   "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
   "devDependencies": {
     "@casper124578/eslint-config": "^5.0.1",
-    "@types/node": "^18.7.14",
-    "dotenv": "^16.0.2",
-    "eslint": "^8.23.0",
+    "@types/node": "^18.7.23",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.24.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "tsup": "^6.2.3",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.4"
   },
   "prettier": {
     "semi": true,
