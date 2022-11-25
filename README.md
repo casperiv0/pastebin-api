@@ -32,7 +32,7 @@ pnpm add pastebin-api
 ```js
 // src/main.js
 import { PasteClient, Publicity, ExpireDate } from "pastebin-api";
-// const { PasteClient, Publicity, ExpireDate } = require("pastebin-api").default; // using CommonJS
+// const { PasteClient, Publicity, ExpireDate } = require("pastebin-api"); // using CommonJS
 
 // Tip: load dev key from a `.env` file
 const client = new PasteClient("DEV_KEY_HERE");
