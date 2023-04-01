@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.1.6
+
+- bump dependencies
+- Move to `pnpm`
+
 ## 5.1.5
 
 - bump dependencies
