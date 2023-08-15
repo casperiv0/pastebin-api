@@ -4,7 +4,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["@casper124578/eslint-config"],
+  "extends": ["@casperiv/eslint-config"],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module",

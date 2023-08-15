@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.0.0
+
+- Move npm handle from `@casper124578` to `@casperiv`
+
 ## 5.1.6
 
 - bump dependencies
