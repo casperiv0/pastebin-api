@@ -15,19 +15,19 @@
 
 ## 5.1.4
 
-- build(deps): bump undici from 5.8.0 to 5.8.2 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/111
+- build(deps): bump undici from 5.8.0 to 5.8.2 by @dependabot in https://github.com/casperiv0/pastebin-api/pull/111
 - bump dependencies
 
 ## 5.1.3
 
-- build(deps-dev): bump tsup from 6.1.3 to 6.2.1 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/110
-- build(deps-dev): bump @types/node from 18.0.6 to 18.6.3 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/109
-- build(deps-dev): bump eslint from 8.20.0 to 8.21.0 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/108
+- build(deps-dev): bump tsup from 6.1.3 to 6.2.1 by @dependabot in https://github.com/casperiv0/pastebin-api/pull/110
+- build(deps-dev): bump @types/node from 18.0.6 to 18.6.3 by @dependabot in https://github.com/casperiv0/pastebin-api/pull/109
+- build(deps-dev): bump eslint from 8.20.0 to 8.21.0 by @dependabot in https://github.com/casperiv0/pastebin-api/pull/108
 - Bump dependencies
 
 ## 5.1.2
 
-- build(deps): bump undici from 5.5.1 to 5.8.0 by @dependabot in https://github.com/Dev-CasperTheGhost/pastebin-api/pull/107
+- build(deps): bump undici from 5.5.1 to 5.8.0 by @dependabot in https://github.com/casperiv0/pastebin-api/pull/107
 
 ## 5.1.1
 
@@ -75,7 +75,7 @@
 
 ## 3.0.0
 
-- Replace `node-fetch` with `undici` ([17a5344](https://github.com/Dev-CasperTheGhost/pastebin-api/commit/82ed0e522a82acfdaf982edb50e771020de9df2b))
+- Replace `node-fetch` with `undici` ([17a5344](https://github.com/casperiv0/pastebin-api/commit/82ed0e522a82acfdaf982edb50e771020de9df2b))
 - Bump dependencies
 
 ## 2.6.1
@@ -85,7 +85,7 @@
 ## 2.6.0
 
 - Bump dependencies
-- feat: support getting raw paste [docs](https://github.com/Dev-CasperTheGhost/pastebin-api/tree/main/docs#get-raw-paste)
+- feat: support getting raw paste [docs](https://github.com/casperiv0/pastebin-api/tree/main/docs#get-raw-paste)
 
 ## 2.5.0
 

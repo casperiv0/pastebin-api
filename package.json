@@ -17,7 +17,7 @@
     "dist"
   ],
   "author": {
-    "name": "Dev-CasperTheGhost",
+    "name": "Casper Iversen",
     "url": "https://www.casperiv.dev"
   },
   "scripts": {
@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dev-CasperTheGhost/pastebin-api"
+    "url": "https://github.com/casperiv0/pastebin-api"
   },
   "bugs": {
-    "url": "https://github.com/Dev-CasperTheGhost/pastebin-api/issues"
+    "url": "https://github.com/casperiv0/pastebin-api/issues"
   },
-  "homepage": "https://github.com/Dev-CasperTheGhost/pastebin-api#readme",
+  "homepage": "https://github.com/casperiv0/pastebin-api#readme",
   "devDependencies": {
     "@casperiv/eslint-config": "^8.0.0",
     "@types/node": "^20.5.0",

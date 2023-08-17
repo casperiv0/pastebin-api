@@ -1,6 +1,6 @@
 # pastebin-api
 
-![License](https://img.shields.io/github/license/dev-caspertheghost/pastebin-api)
+![License](https://img.shields.io/github/license/casperiv0/pastebin-api)
 ![Downloads](https://img.shields.io/npm/dw/pastebin-api)
 
 A very simple npm package to interact with the pastebin api.
@@ -54,4 +54,4 @@ Made with ❤️ and TypeScript!
 
 ## License
 
-[MIT © Dev-CasperTheGhost](./LICENSE)
+[MIT © Casper Iversen](./LICENSE)
