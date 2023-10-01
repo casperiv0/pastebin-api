@@ -1,5 +1,13 @@
 # Changelog
 
+## 6.2.0
+
+- Upgrade deps
+
+## 6.1.0
+
+- Fix: `dist` was not uploaded.
+
 ## 6.0.0
 
 - Move npm handle from `@casper124578` to `@casperiv`
