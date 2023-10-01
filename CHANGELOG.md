@@ -1,8 +1,9 @@
 # Changelog
 
-## 6.2.0
+## 7.0.0
 
 - Upgrade deps
+- **BREAKING:** Require Node.js v18 or higher.
 
 ## 6.1.0
 
