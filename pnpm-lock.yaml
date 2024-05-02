@@ -18,7 +18,7 @@ devDependencies:
     version: 8.0.0(eslint@8.56.0)(prettier@3.2.5)(typescript@5.3.2)
   '@types/node':
     specifier: ^20.8.0
-    version: 20.12.7
+    version: 20.12.8
   dotenv:
     specifier: ^16.3.1
     version: 16.4.5
@@ -33,7 +33,7 @@ devDependencies:
     version: 5.0.5
   ts-node:
     specifier: ^10.9.1
-    version: 10.9.2(@types/node@20.12.7)(typescript@5.3.2)
+    version: 10.9.2(@types/node@20.12.8)(typescript@5.3.2)
   tsup:
     specifier: ^8.0.1
     version: 8.0.2(ts-node@10.9.2)(typescript@5.3.2)
@@ -536,8 +536,8 @@ packages:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
     dev: true
 
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
+  /@types/node@20.12.8:
+    resolution: {integrity: sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1957,7 +1957,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.1.0
-      ts-node: 10.9.2(@types/node@20.12.7)(typescript@5.3.2)
+      ts-node: 10.9.2(@types/node@20.12.8)(typescript@5.3.2)
       yaml: 2.3.1
     dev: true
 
@@ -2317,7 +2317,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.12.7)(typescript@5.3.2):
+  /ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.2):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -2336,7 +2336,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 20.12.7
+      '@types/node': 20.12.8
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
