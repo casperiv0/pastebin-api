@@ -35,7 +35,7 @@
     "pastebin-api"
   ],
   "dependencies": {
-    "fast-xml-parser": "^4.3.1",
+    "fast-xml-parser": "^5.7.0",
     "undici": "^6.2.1"
   },
   "repository": {
