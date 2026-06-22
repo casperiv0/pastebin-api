@@ -10,7 +10,7 @@ dependencies:
     version: 5.7.0
   undici:
     specifier: ^6.2.1
-    version: 6.15.0
+    version: 6.27.0
 
 devDependencies:
   '@casperiv/eslint-config':
@@ -2441,8 +2441,8 @@ packages:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
-  /undici@6.15.0:
-    resolution: {integrity: sha512-VviMt2tlMg1BvQ0FKXxrz1eJuyrcISrL2sPfBf7ZskX/FCEc/7LeThQaoygsMJpNqrATWQIsRVx+1Dpe4jaYuQ==}
+  /undici@6.27.0:
+    resolution: {integrity: sha512-YmfV3YnEDzXRC5lZ2jWtWWHKGUm1zIt8AhesR1tens+HTNv+YZlN/dp6G727LOvMJ8xjP9Be7Y2Sdr96LDm+pg==}
     engines: {node: '>=18.17'}
     dev: false
 
